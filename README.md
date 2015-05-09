@@ -4,7 +4,7 @@ Take flat constants files and turn their properties into a read-only object.
 
 ## Usage
 
-Given a JSON structure like this which defines two `ACCOUNT.TYPE`s, `USER` and `ADMIN`:
+Given an `example.json` structure like this which defines two `ACCOUNT.TYPE`s, `USER` and `ADMIN`:
 
     [{
         "feature": "ACCOUNT",
