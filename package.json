@@ -1,0 +1,16 @@
+{
+  "name": "constantly",
+  "description": "Parse flat JSON constants files",
+  "version": "0.1.0",
+  "dependencies": {
+    "hoops": "^0.2.1"
+  },
+  "optionalDependencies": {},
+  "devDependencies": {
+    "path": "^0.11.14",
+    "gulp-util": "^3.0.4"
+  },
+  "engines": {
+    "node": ">=0.10.0"
+  }
+}
