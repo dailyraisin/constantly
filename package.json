@@ -2,6 +2,10 @@
   "name": "constantly",
   "description": "Parse constant files and put them in a frozen object",
   "version": "0.1.0",
+  "preferGlobal": "false",
+  "main": "index.js",
+  "author": "Daily Raisin LLC ",
+  "keywords": ["constant", "constants", "parsing", "JSON"],
   "dependencies": {
     "hoops": "^0.2.1"
   },
