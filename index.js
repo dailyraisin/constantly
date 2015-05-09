@@ -4,7 +4,7 @@ var hoops = require('hoops');
 
 function init (target) {
     var obj = {};
-    var raw = require(target);
+    var raw = require(target); //TODO make sure this is JSON?, otherwise throw an error
 
     raw.forEach(function (prop) {
 
