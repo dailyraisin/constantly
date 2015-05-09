@@ -1,0 +1,11 @@
+node_modules
+dist
+.tmp
+.sass-cache
+.DS_Store
+.VolumeIcon.icns
+.fseventsd
+*.swp
+.config.sh
+1.log
+reso/complete
