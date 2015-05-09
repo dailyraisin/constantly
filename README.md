@@ -26,7 +26,8 @@ Given an `example.json` structure like this which defines two `ACCOUNT.TYPE`s, `
 We can get the value of those constants like so:
 
     var constantly = require('constantly');
-    var $C = constantly(path.resolve('example.json'));
+    var path = require('path');
+    var $C = constantly(path.resolve('example.json')); //pass it JSON, in this case, a path to a JSON file
 
     var admin = $C.ACCOUNT.TYPE.ADMIN.value; //200
 
