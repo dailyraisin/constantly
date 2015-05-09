@@ -6,6 +6,5 @@ dist
 .VolumeIcon.icns
 .fseventsd
 *.swp
-.config.sh
 1.log
-reso/complete
+npm-debug.log
