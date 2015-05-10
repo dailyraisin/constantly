@@ -1,8 +1,7 @@
 {
   "name": "constantly",
   "description": "Parse constant definition files and put them into a frozen object",
-  "version": "0.1.4",
-  "preferGlobal": "false",
+  "version": "0.1.5",
   "main": "index.js",
   "author": "Daily Raisin LLC",
   "repository" : {
