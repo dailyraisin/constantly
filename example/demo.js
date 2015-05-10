@@ -4,7 +4,26 @@ var path = require('path');
 var constantly = require('../index.js');
 var gutil = require('gulp-util');
 
-var $C = constantly(path.resolve('example.json'));
+var $C = constantly(require(path.resolve('example/example.json'))); //succeeds, JSON from a file
+
+//var $C = constantly('example/example.json'); //fails, just a string which is a valid path but expects JSON
+
+//var $C = constantly([{ //succeeds, pass it json
+//    "feature": "ACCOUNT",
+//    "category": "TYPE",
+//    "property": "USER",
+//    "comment": "A regular user that can login and do normal things",
+//    "value": "USER",
+//    "sequence": 0
+//},
+//{
+//    "feature": "ACCOUNT",
+//    "category": "TYPE",
+//    "property": "ADMIN",
+//    "comment": "User which is an administrator",
+//    "value": "ADMIN",
+//    "sequence": 0
+//}]);
 
 for (var f in $C) {
     gutil.log(gutil.colors.cyan(f));
@@ -16,7 +35,7 @@ for (var f in $C) {
     }
 }
 
-var proposedAccountType = $C.ACCOUNT.TYPE.ADMIN.value;
+var proposedAccountType = 'ADMIN';
 
 switch(proposedAccountType) {
 case $C.ACCOUNT.TYPE.USER.value:
@@ -25,5 +44,8 @@ break;
 
 case $C.ACCOUNT.TYPE.ADMIN.value:
     gutil.log('is admin');
+break;
+default:
+    gutil.log('unknown user type');
 break;
 }

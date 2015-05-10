@@ -27,7 +27,7 @@ We can get the value of those constants like so:
 
     var constantly = require('constantly');
     var path = require('path');
-    var $C = constantly(path.resolve('example.json')); //pass it JSON, in this case, a path to a JSON file
+    var $C = constantly(require(path.resolve('example.json'))); //pass it real JSON
 
     var admin = $C.ACCOUNT.TYPE.ADMIN.value; //200
 
@@ -41,3 +41,11 @@ Comments are useful for authors of the source JSON but are ignored otherwise.
 
 ### Sequence
 Sequence is used for ordering properties in UI.
+
+## Example
+
+    node example/demo.js
+
+## TODO
+
+- validate JSON to match this pattern upon injestion

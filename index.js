@@ -4,10 +4,9 @@ var hoops = require('hoops');
 
 function init (target) {
     var obj = {};
-    var raw = require(target); //TODO make sure this is JSON?, otherwise throw an error
+    var raw = target; //TODO https://www.npmjs.com/package/is-my-json-valid
 
     raw.forEach(function (prop) {
-
         var strPath = [
             prop.feature,
             prop.category,
