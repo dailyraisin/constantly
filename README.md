@@ -4,7 +4,7 @@ Take flat constants files and turn their properties into a read-only object.
 
 ## Usage
 
-Given an `example.json` structure like this which defines two `ACCOUNT.TYPE`s, `USER` and `ADMIN`:
+Given an `example.json` structure like this:
 
     [{
         "feature": "ACCOUNT",
@@ -27,20 +27,23 @@ We can get the value of those constants like so:
 
     var constantly = require('constantly');
     var path = require('path');
+    
     var $C = constantly(require(path.resolve('example.json'))); //pass it real JSON
 
     var admin = $C.ACCOUNT.TYPE.ADMIN.value; //200
+    var user = $C.ACCOUNT.TYPE.USER.value; //100
 
 
-## JSON Setup
 
-You are required to define a feature, category, and property to “namespace” each constant.
+## JSON Format
 
-### Comments
-Comments are useful for authors of the source JSON but are ignored otherwise.
+You are required to define a `feature`, `category`, and `property` to “namespace” each constant.
 
-### Sequence
-Sequence is used for ordering properties in UI.
+### `Comment`
+`Comment`s are useful for authors of the source JSON, but are ignored upon converting into an object.
+
+### `Sequence`
+`Sequence` is used for ordering properties in UI.
 
 ## Example
 
@@ -48,4 +51,4 @@ Sequence is used for ordering properties in UI.
 
 ## TODO
 
-- validate JSON to match this pattern upon injestion
+- validate JSON to match the prescribed pattern upon injestion
