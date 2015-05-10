@@ -1,10 +1,10 @@
 {
   "name": "constantly",
-  "description": "Parse constant files and put them in a frozen object",
-  "version": "0.1.3",
+  "description": "Parse constant definition files and put them into a frozen object",
+  "version": "0.1.4",
   "preferGlobal": "false",
   "main": "index.js",
-  "author": "Daily Raisin LLC ",
+  "author": "Daily Raisin LLC",
   "repository" : {
       "type": "git",
       "url": "https://github.com/dailyraisin/constantly"
